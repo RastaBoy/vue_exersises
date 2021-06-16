@@ -11,7 +11,18 @@
     
     <div class="container pt-5" id="app">
         <div class="card center">
-            <h1> {{ title }} </h1>
+            <h1> {{ title }}</h1>
+            <div class="form-control">
+                <input 
+                    type="text" 
+                    v-bind:placeholder="placeholderString" 
+                    v-bind:value="inputValue"
+                    v-on:input="inputChangeHandler"
+                />
+            </div>
+            <h2>inputValue: {{ inputValue }}</h2>
+            <button class="btn">Добавить</button>
+            <hr />
         </div>
     </div>
 

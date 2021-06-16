@@ -3,7 +3,15 @@
 const App = {
     data() {
         return {
-            title: 'Счетчик'
+            title: 'Список заметок',
+            placeholderString: 'Введите название заметки',
+            inputValue: ''
+        }
+    },
+    methods: {
+        inputChangeHandler() {
+            //console.log("Something", event.target.value)
+            this.inputValue = event.target.value
         }
     }
 }

@@ -21,8 +21,16 @@
                 />
             </div>
             <h2>inputValue: {{ inputValue }}</h2>
-            <button class="btn">Добавить</button>
+            <div>
+                <button class="btn" v-on:click="addNewNote">Добавить</button>
+                <button class="btn danger" v-on:click="clearAllNotes">Очистить</button>     
+            </div>
             <hr />
+            <ul class="list">
+                <li class="list-item" v-for="myNote in notes">
+                    {{ myNote }}
+                </li>
+            </ul>
         </div>
     </div>
 

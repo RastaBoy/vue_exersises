@@ -18,6 +18,7 @@
                     v-bind:placeholder="placeholderString" 
                     v-bind:value="inputValue"
                     v-on:input="inputChangeHandler"
+                    v-on:keypress.enter="addNewNote"
                 />
             </div>
             <h2>inputValue: {{ inputValue }}</h2>
@@ -27,8 +28,9 @@
             </div>
             <hr />
             <ul class="list">
-                <li class="list-item" v-for="myNote in notes">
-                    {{ myNote }}
+                <li class="list-item" v-for="(myNote, index) in notes">
+                    ({{ index+1 }}) {{ myNote }}  
+                    <button class="btn danger" v-on:click="removeNote(index)">Удалить</button>
                 </li>
             </ul>
         </div>

@@ -23,7 +23,18 @@ const App = {
                 this.notes.pop()
             }
             
+        },
+        removeNote(index) {
+            this.notes.splice(index, 1)
         }
+        /*
+        inputKeyPress(event) {
+            //console.log(event.key)
+            if (event.key == 'Enter') {
+                this.addNewNote()
+            }
+        }
+        */
     }
 }
 
